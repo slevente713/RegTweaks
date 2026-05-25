@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\runas]
+@="Run As Administrator (PowerShell)"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\runas\command]
+@="powershell.exe \"-Command\" \"if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & '%1'\""
+
+; Szerkesztés Jegyzettömbbel opció
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\EditWithNotepad]
+@="Edit With Notepad"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\EditWithNotepad\command]
+@="notepad.exe \"%1\""
